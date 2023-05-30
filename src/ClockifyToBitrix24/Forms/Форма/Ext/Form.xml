@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="60"/>
+			<ChildItems>
+				<Page name="СтраницаВремя" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница время</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаВремяРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<UsualGroup name="Группа4" id="48">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="49"/>
+							<ChildItems>
+								<Button name="ПолучитьВремяClockify" id="9">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ПолучитьВремяClockify</CommandName>
+									<Picture>
+										<xr:Abs>Picture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ПолучитьВремяClockifyРасширеннаяПодсказка" id="10"/>
+								</Button>
+								<Button name="ЭкспортироватьВремяВБитрикс" id="46">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ЭкспортироватьВремяВБитрикс</CommandName>
+									<Picture>
+										<xr:Abs>Picture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ЭкспортироватьВремяВБитриксРасширеннаяПодсказка" id="47"/>
+								</Button>
+								<UsualGroup name="Группа3" id="16">
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="17"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация2" id="18">
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="Декорация2КонтекстноеМеню" id="19"/>
+											<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="20"/>
+										</PictureDecoration>
+										<InputField name="БитриксНомерЗадачи" id="11">
+											<DataPath>БитриксНомерЗадачи</DataPath>
+											<Mask>999999</Mask>
+											<ContextMenu name="БитриксНомерЗадачиКонтекстноеМеню" id="12"/>
+											<ExtendedTooltip name="БитриксНомерЗадачиРасширеннаяПодсказка" id="13"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ДатаС" id="50">
+									<DataPath>ДатаС</DataPath>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ДатаСКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ДатаСРасширеннаяПодсказка" id="52"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ЗатраченноеВремя" id="21">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ЗатраченноеВремя</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗатраченноеВремяКонтекстноеМеню" id="22"/>
+							<AutoCommandBar name="ЗатраченноеВремяКоманднаяПанель" id="23">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЗатраченноеВремяРасширеннаяПодсказка" id="24"/>
+							<SearchStringAddition name="ЗатраченноеВремяСтрокаПоиска" id="25">
+								<AdditionSource>
+									<Item>ЗатраченноеВремя</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗатраченноеВремяСтрокаПоискаКонтекстноеМеню" id="26"/>
+								<ExtendedTooltip name="ЗатраченноеВремяСтрокаПоискаРасширеннаяПодсказка" id="27"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗатраченноеВремяСостояниеПросмотра" id="28">
+								<AdditionSource>
+									<Item>ЗатраченноеВремя</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗатраченноеВремяСостояниеПросмотраКонтекстноеМеню" id="29"/>
+								<ExtendedTooltip name="ЗатраченноеВремяСостояниеПросмотраРасширеннаяПодсказка" id="30"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗатраченноеВремяУправлениеПоиском" id="31">
+								<AdditionSource>
+									<Item>ЗатраченноеВремя</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗатраченноеВремяУправлениеПоискомКонтекстноеМеню" id="32"/>
+								<ExtendedTooltip name="ЗатраченноеВремяУправлениеПоискомРасширеннаяПодсказка" id="33"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="ЗатраченноеВремяУчтеноВБитрикс" id="43">
+									<DataPath>ЗатраченноеВремя.УчтеноВБитрикс</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Учтено в Б24</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Abs>HeaderPicture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗатраченноеВремяУчтеноВБитриксКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ЗатраченноеВремяУчтеноВБитриксРасширеннаяПодсказка" id="45"/>
+								</CheckBoxField>
+								<InputField name="ЗатраченноеВремяНомерЗадачи" id="53">
+									<DataPath>ЗатраченноеВремя.НомерЗадачи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Abs>HeaderPicture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="ЗатраченноеВремяНомерЗадачиКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ЗатраченноеВремяНомерЗадачиРасширеннаяПодсказка" id="55"/>
+								</InputField>
+								<InputField name="ЗатраченноеВремяНазваниеЗадачи" id="56">
+									<DataPath>ЗатраченноеВремя.НазваниеЗадачи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Abs>HeaderPicture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>60</MaxWidth>
+									<ContextMenu name="ЗатраченноеВремяНазваниеЗадачиКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ЗатраченноеВремяНазваниеЗадачиРасширеннаяПодсказка" id="58"/>
+								</InputField>
+								<InputField name="ЗатраченноеВремяДата" id="34">
+									<DataPath>ЗатраченноеВремя.Дата</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Abs>HeaderPicture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<ContextMenu name="ЗатраченноеВремяДатаКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ЗатраченноеВремяДатаРасширеннаяПодсказка" id="36"/>
+								</InputField>
+								<InputField name="ЗатраченноеВремяЗатраченоеВремя" id="37">
+									<DataPath>ЗатраченноеВремя.ЗатраченоеВремя</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Abs>HeaderPicture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<ContextMenu name="ЗатраченноеВремяЗатраченоеВремяКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="ЗатраченноеВремяЗатраченоеВремяРасширеннаяПодсказка" id="39"/>
+								</InputField>
+								<InputField name="ЗатраченноеВремяКомментарий" id="40">
+									<DataPath>ЗатраченноеВремя.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Abs>HeaderPicture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<ContextMenu name="ЗатраченноеВремяКомментарийКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="ЗатраченноеВремяКомментарийРасширеннаяПодсказка" id="42"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНастройки" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаНастройкиРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="7">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="8"/>
+							<ChildItems>
+								<UsualGroup name="Группа2" id="14">
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="15"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация1" id="4">
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="5"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="6"/>
+										</PictureDecoration>
+										<InputField name="ClockifyAPIkey" id="1">
+											<DataPath>ClockifyAPIkey</DataPath>
+											<PasswordMode>true</PasswordMode>
+											<ContextMenu name="ClockifyAPIkeyКонтекстноеМеню" id="2"/>
+											<ExtendedTooltip name="ClockifyAPIkeyРасширеннаяПодсказка" id="3"/>
+											<Events>
+												<Event name="OnChange">ClockifyAPIkeyПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа5" id="65">
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="66"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация3" id="70">
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="Декорация3КонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="72"/>
+										</PictureDecoration>
+										<InputField name="Bitrix24WebHook" id="67">
+											<DataPath>Bitrix24WebHook</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вебхук должен иметь доступ к методам:
+task.elapseditem.getlist
+task.elapseditem.add
+tasks.task.list</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<PasswordMode>true</PasswordMode>
+											<ContextMenu name="Bitrix24WebHookКонтекстноеМеню" id="68"/>
+											<ExtendedTooltip name="Bitrix24WebHookРасширеннаяПодсказка" id="69"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ClockifyToBitrix24</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ClockifyAPIkey" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Clockify API Key</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Save>
+				<Field>ClockifyAPIkey</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="БитриксНомерЗадачи" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер БЗ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>6</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ЗатраченноеВремя" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Затраченное время</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Дата" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗатраченоеВремя" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Затраченое время</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Time</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УчтеноВБитрикс" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учтено в Б24</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗатраченоСекунд" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Затрачено секунд</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерЗадачи" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НазваниеЗадачи" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДатаС" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<Save>
+				<Field>ДатаС</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Bitrix24WebHook" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Bitrix24 Webhook</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Save>
+				<Field>Bitrix24WebHook</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПолучитьВремяClockify" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить время</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить время Clockify</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьВремяClockify</Action>
+		</Command>
+		<Command name="ЭкспортироватьВремяВБитрикс" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Экспортировать время</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Экспортировать время в Битрикс 24</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЭкспортироватьВремяВБитрикс</Action>
+		</Command>
+	</Commands>
+</Form>
