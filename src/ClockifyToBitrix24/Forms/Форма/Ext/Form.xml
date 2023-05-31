@@ -302,6 +302,19 @@ tasks.task.list</v8:content>
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
+						<LabelDecoration name="ДекорацияПодсказка" id="73">
+							<Width>100</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font Almarai&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;* для корректной работы получения времени Clockify необходимо комментарий &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;по
+ затраченному времени заполнять по шаблону:&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Almarai&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;&lt;&lt;НомерЗадачиБитрикс&gt;&gt; &lt;&lt;Описание затраченного времени&gt;&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодсказкаКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="ДекорацияПодсказкаРасширеннаяПодсказка" id="75"/>
+						</LabelDecoration>
 					</ChildItems>
 				</Page>
 			</ChildItems>
