@@ -86,6 +86,9 @@
 											<Mask>999999</Mask>
 											<ContextMenu name="БитриксНомерЗадачиКонтекстноеМеню" id="12"/>
 											<ExtendedTooltip name="БитриксНомерЗадачиРасширеннаяПодсказка" id="13"/>
+											<Events>
+												<Event name="OnChange">БитриксНомерЗадачиПриИзменении</Event>
+											</Events>
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
@@ -251,7 +254,16 @@
 									<ChildItems>
 										<InputField name="ClockifyAPIkey" id="1">
 											<DataPath>ClockifyAPIkey</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>cгенерировать или узнать свой ключ api можно по адресу:
+https://app.clockify.me/user/settings</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
 											<PasswordMode>true</PasswordMode>
+											<ClearButton>true</ClearButton>
 											<ContextMenu name="ClockifyAPIkeyКонтекстноеМеню" id="2"/>
 											<ExtendedTooltip name="ClockifyAPIkeyРасширеннаяПодсказка" id="3"/>
 											<Events>
@@ -263,7 +275,7 @@
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Вебхук должен иметь доступ к методам:
+													<v8:content>вебхук должен иметь доступ к методам:
 user.get
 task.elapseditem.getlist
 task.elapseditem.add
@@ -272,6 +284,7 @@ tasks.task.list</v8:content>
 											</ToolTip>
 											<ToolTipRepresentation>Button</ToolTipRepresentation>
 											<PasswordMode>true</PasswordMode>
+											<ClearButton>true</ClearButton>
 											<ContextMenu name="Bitrix24WebHookКонтекстноеМеню" id="68"/>
 											<ExtendedTooltip name="Bitrix24WebHookРасширеннаяПодсказка" id="69"/>
 										</InputField>
@@ -284,6 +297,14 @@ tasks.task.list</v8:content>
 												<InputField name="BitrixUser" id="78">
 													<DataPath>BitrixUser</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>узнать id пользователя можно на странице профиля в адресной строке:
+https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<ContextMenu name="BitrixUserКонтекстноеМеню" id="79"/>
 													<ExtendedTooltip name="BitrixUserРасширеннаяПодсказка" id="80"/>
 												</InputField>
