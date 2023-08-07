@@ -28,13 +28,12 @@
 	
 КонецФункции
 
-Функция Clockify_ДанныеПоЗатраченномуВремени(ClockifyAPIkey, ClockifyactiveWorkspace, ClockifyUserID) Экспорт
+Функция Clockify_ДанныеПоЗатраченномуВремени(ClockifyAPIkey, ClockifyactiveWorkspace, ClockifyUserID, ClockifyPageSize) Экспорт
 	
 	АдресСервера = "api.clockify.me";
 	Метод = СтрШаблон("/api/v1/workspaces/%1/user/%2/time-entries/", ClockifyactiveWorkspace, ClockifyUserID);
-	КоличествоЗаписей = 100;
 	
-	Возврат Clockify_ОтправитьGETЗапрос(АдресСервера, ClockifyAPIkey, Метод, КоличествоЗаписей);
+	Возврат Clockify_ОтправитьGETЗапрос(АдресСервера, ClockifyAPIkey, Метод, ClockifyPageSize);
 	
 КонецФункции
 
@@ -396,7 +395,7 @@
 
 Функция ПолучитьВерсиюПроекта() Экспорт
 	
-	Возврат "0.0.6";
+	Возврат "0.0.7";
 	
 КонецФункции
 
@@ -406,14 +405,14 @@
 	
 КонецФункции
 
-Функция Clockify_ОтправитьGETЗапрос(АдресСервера, КлючАпи, Метод, КоличествоЗаписей = 0)
+Функция Clockify_ОтправитьGETЗапрос(АдресСервера, КлючАпи, Метод, ClockifyPageSize = 0)
 	
 	Заголовки = Новый Соответствие();
 	Заголовки.Вставить("content-type", "application/json");
 	Заголовки.Вставить("X-Api-Key", КлючАпи);
 	
-	Если ЗначениеЗаполнено(КоличествоЗаписей) Тогда
-		Параметры = СтрШаблон("?page-size=%1", Формат(КоличествоЗаписей, "ЧГ="));
+	Если ЗначениеЗаполнено(ClockifyPageSize) Тогда
+		Параметры = СтрШаблон("?page-size=%1", Формат(ClockifyPageSize, "ЧГ="));
 	Иначе
 		Параметры = "";
 	КонецЕсли;
