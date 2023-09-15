@@ -415,7 +415,6 @@ https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
-			<FillCheck>ShowError</FillCheck>
 		</Attribute>
 		<Attribute name="ЗатраченноеВремя" id="4">
 			<Title>
@@ -543,6 +542,7 @@ https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v
 					<v8:DateFractions>Date</v8:DateFractions>
 				</v8:DateQualifiers>
 			</Type>
+			<FillCheck>ShowError</FillCheck>
 			<Save>
 				<Field>ДатаС</Field>
 			</Save>
@@ -643,6 +643,28 @@ https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v
 				<Field>ClockifyPageSize</Field>
 			</Save>
 		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЗатраченноеВремя</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ЗатраченноеВремя.УчтеноВБитрикс</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ПравоСозданияФон</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
 		<Command name="ПолучитьВремяClockify" id="1">
