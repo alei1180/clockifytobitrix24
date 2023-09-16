@@ -286,7 +286,7 @@ test.bitrix24.ru</v8:content>
 												</v8:item>
 											</ToolTip>
 											<ToolTipRepresentation>Button</ToolTipRepresentation>
-											<PasswordMode>true</PasswordMode>
+											<PasswordMode>false</PasswordMode>
 											<ClearButton>true</ClearButton>
 											<ContextMenu name="BitrixURLКонтекстноеМеню" id="93"/>
 											<ExtendedTooltip name="BitrixURLРасширеннаяПодсказка" id="94"/>
