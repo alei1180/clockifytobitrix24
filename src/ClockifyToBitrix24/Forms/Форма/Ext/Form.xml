@@ -5,6 +5,7 @@
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -98,11 +99,44 @@
 									<ContextMenu name="ДатаСКонтекстноеМеню" id="51"/>
 									<ExtendedTooltip name="ДатаСРасширеннаяПодсказка" id="52"/>
 								</InputField>
-								<InputField name="ClockifyPageSize" id="98">
-									<DataPath>ClockifyPageSize</DataPath>
-									<ContextMenu name="ClockifyPageSizeКонтекстноеМеню" id="99"/>
-									<ExtendedTooltip name="ClockifyPageSizeРасширеннаяПодсказка" id="100"/>
-								</InputField>
+								<RadioButtonField name="ФильтрПоНевыгруженнымВБитрикс" id="101">
+									<DataPath>ФильтрПоНевыгруженнымВБитрикс</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Все</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не выгруженные</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ФильтрПоНевыгруженнымВБитриксКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="ФильтрПоНевыгруженнымВБитриксРасширеннаяПодсказка" id="103"/>
+									<Events>
+										<Event name="OnChange">ФильтрПоНевыгруженнымВБитриксПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="ЗатраченноеВремя" id="21">
@@ -166,6 +200,7 @@
 										<xr:Abs>HeaderPicture.png</xr:Abs>
 										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</HeaderPicture>
+									<FooterFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ЗатраченноеВремяУчтеноВБитриксКонтекстноеМеню" id="44"/>
 									<ExtendedTooltip name="ЗатраченноеВремяУчтеноВБитриксРасширеннаяПодсказка" id="45"/>
@@ -189,6 +224,7 @@
 										<xr:Abs>HeaderPicture.png</xr:Abs>
 										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</HeaderPicture>
+									<FooterFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>60</MaxWidth>
 									<ContextMenu name="ЗатраченноеВремяНазваниеЗадачиКонтекстноеМеню" id="57"/>
@@ -204,6 +240,28 @@
 									<ContextMenu name="ЗатраченноеВремяДатаКонтекстноеМеню" id="35"/>
 									<ExtendedTooltip name="ЗатраченноеВремяДатаРасширеннаяПодсказка" id="36"/>
 								</InputField>
+								<InputField name="ЗатраченноеВремяДатаНачала" id="104">
+									<DataPath>ЗатраченноеВремя.ДатаНачала</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Abs>HeaderPicture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<ContextMenu name="ЗатраченноеВремяДатаНачалаКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="ЗатраченноеВремяДатаНачалаРасширеннаяПодсказка" id="106"/>
+								</InputField>
+								<InputField name="ЗатраченноеВремяДатаОкончания" id="107">
+									<DataPath>ЗатраченноеВремя.ДатаОкончания</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Abs>HeaderPicture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<ContextMenu name="ЗатраченноеВремяДатаОкончанияКонтекстноеМеню" id="108"/>
+									<ExtendedTooltip name="ЗатраченноеВремяДатаОкончанияРасширеннаяПодсказка" id="109"/>
+								</InputField>
 								<InputField name="ЗатраченноеВремяЗатраченоеВремя" id="37">
 									<DataPath>ЗатраченноеВремя.ЗатраченоеВремя</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -211,6 +269,7 @@
 										<xr:Abs>HeaderPicture.png</xr:Abs>
 										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</HeaderPicture>
+									<FooterFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
 									<Width>13</Width>
 									<ContextMenu name="ЗатраченноеВремяЗатраченоеВремяКонтекстноеМеню" id="38"/>
 									<ExtendedTooltip name="ЗатраченноеВремяЗатраченоеВремяРасширеннаяПодсказка" id="39"/>
@@ -276,12 +335,24 @@ https://app.clockify.me/user/settings</v8:content>
 												<Event name="OnChange">ClockifyAPIkeyПриИзменении</Event>
 											</Events>
 										</InputField>
+										<InputField name="ClockifyPageSize" id="98">
+											<DataPath>ClockifyPageSize</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ограничение по количеству получаемых записей Clockify</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ContextMenu name="ClockifyPageSizeКонтекстноеМеню" id="99"/>
+											<ExtendedTooltip name="ClockifyPageSizeРасширеннаяПодсказка" id="100"/>
+										</InputField>
 										<InputField name="BitrixURL" id="92">
 											<DataPath>BitrixURL</DataPath>
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Адрес сайта битрикс, например:
+													<v8:content>адрес сайта битрикс, например:
 test.bitrix24.ru</v8:content>
 												</v8:item>
 											</ToolTip>
@@ -527,6 +598,34 @@ https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="ДатаНачала" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата начала</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаОкончания" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата окончания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ДатаС" id="5">
@@ -627,7 +726,7 @@ https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Количество записей</v8:content>
+					<v8:content>Clockify page size</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -642,6 +741,22 @@ https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v
 			<Save>
 				<Field>ClockifyPageSize</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="ФильтрПоНевыгруженнымВБитрикс" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фильтр по невыгруженным в битрикс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
@@ -686,7 +801,7 @@ https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Экспортировать время</v8:content>
+					<v8:content>Выгрузить время</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
