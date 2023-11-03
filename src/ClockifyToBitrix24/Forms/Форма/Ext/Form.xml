@@ -391,18 +391,51 @@
 					<ExtendedTooltip name="СтраницаНастройкиРасширеннаяПодсказка" id="64"/>
 					<ChildItems>
 						<UsualGroup name="Группа8" id="88">
-							<Group>AlwaysHorizontal</Group>
+							<Group>Vertical</Group>
 							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="89"/>
 							<ChildItems>
-								<UsualGroup name="Группа7" id="86">
+								<UsualGroup name="Группа2" id="140">
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="141"/>
+									<ChildItems>
+										<Button name="СохранитьНастройкиВФайл" id="142">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.СохранитьНастройкиВФайл</CommandName>
+											<ExtendedTooltip name="СохранитьНастройкиВФайлРасширеннаяПодсказка" id="143"/>
+										</Button>
+										<Button name="ЗагрузитьНастройкиИзФайла" id="144">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.ЗагрузитьНастройкиИзФайла</CommandName>
+											<ExtendedTooltip name="ЗагрузитьНастройкиИзФайлаРасширеннаяПодсказка" id="145"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаНастройки" id="86">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки</v8:content>
+										</v8:item>
+									</ToolTip>
 									<Group>Vertical</Group>
 									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ThroughAlign>Use</ThroughAlign>
-									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="87"/>
+									<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="87"/>
 									<ChildItems>
 										<InputField name="ClockifyAPIkey" id="1">
 											<DataPath>ClockifyAPIkey</DataPath>
@@ -486,6 +519,12 @@ https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v
 													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<ContextMenu name="BitrixUserКонтекстноеМеню" id="79"/>
 													<ExtendedTooltip name="BitrixUserРасширеннаяПодсказка" id="80"/>
+												</InputField>
+												<InputField name="BitrixUserID" id="146">
+													<DataPath>BitrixUserID</DataPath>
+													<Visible>false</Visible>
+													<ContextMenu name="BitrixUserIDКонтекстноеМеню" id="147"/>
+													<ExtendedTooltip name="BitrixUserIDРасширеннаяПодсказка" id="148"/>
 												</InputField>
 												<Button name="ВыбратьПользователяБитрикс" id="84">
 													<Type>UsualButton</Type>
@@ -955,6 +994,44 @@ https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v
 				</v8:item>
 			</ToolTip>
 			<Action>ВыбратьПользователяБитрикс</Action>
+		</Command>
+		<Command name="СохранитьНастройкиВФайл" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки в файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьНастройкиВФайл</Action>
+		</Command>
+		<Command name="ЗагрузитьНастройкиИзФайла" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить настройки из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить настройки из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.LoadReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьНастройкиИзФайла</Action>
 		</Command>
 	</Commands>
 </Form>
