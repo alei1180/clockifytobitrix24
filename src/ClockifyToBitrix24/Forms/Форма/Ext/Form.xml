@@ -270,6 +270,8 @@
 										<xr:Abs>HeaderPicture.png</xr:Abs>
 										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</HeaderPicture>
+									<FooterFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<FooterHorizontalAlign>Center</FooterHorizontalAlign>
 									<ContextMenu name="ЗатраченноеВремяЗавершенаКонтекстноеМеню" id="153"/>
 									<ExtendedTooltip name="ЗатраченноеВремяЗавершенаРасширеннаяПодсказка" id="154"/>
 								</LabelField>
