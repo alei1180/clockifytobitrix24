@@ -211,6 +211,9 @@
 								<ContextMenu name="ЗатраченноеВремяУправлениеПоискомКонтекстноеМеню" id="32"/>
 								<ExtendedTooltip name="ЗатраченноеВремяУправлениеПоискомРасширеннаяПодсказка" id="33"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ЗатраченноеВремяВыбор</Event>
+							</Events>
 							<ChildItems>
 								<CheckBoxField name="ЗатраченноеВремяУчтеноВБитрикс" id="43">
 									<DataPath>ЗатраченноеВремя.УчтеноВБитрикс</DataPath>
