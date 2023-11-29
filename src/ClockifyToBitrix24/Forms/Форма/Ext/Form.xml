@@ -73,62 +73,96 @@
 								</Button>
 								<InputField name="ДатаС" id="50">
 									<DataPath>ДатаС</DataPath>
+									<TitleLocation>Left</TitleLocation>
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ДатаСКонтекстноеМеню" id="51"/>
 									<ExtendedTooltip name="ДатаСРасширеннаяПодсказка" id="52"/>
 								</InputField>
-								<RadioButtonField name="ФильтрПоНевыгруженнымВБитрикс" id="101">
-									<DataPath>ФильтрПоНевыгруженнымВБитрикс</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<RadioButtonType>Tumbler</RadioButtonType>
-									<ChoiceList>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Все</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">0</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Не выгруженные</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">1</Value>
-											</xr:Value>
-										</xr:Item>
-									</ChoiceList>
-									<ContextMenu name="ФильтрПоНевыгруженнымВБитриксКонтекстноеМеню" id="102"/>
-									<ExtendedTooltip name="ФильтрПоНевыгруженнымВБитриксРасширеннаяПодсказка" id="103"/>
-									<Events>
-										<Event name="OnChange">ФильтрПоНевыгруженнымВБитриксПриИзменении</Event>
-									</Events>
-								</RadioButtonField>
-								<InputField name="БитриксСписокЗадач" id="149">
-									<DataPath>БитриксСписокЗадач</DataPath>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>18</MaxWidth>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ClearButton>true</ClearButton>
-									<ListChoiceMode>true</ListChoiceMode>
-									<ContextMenu name="БитриксСписокЗадачКонтекстноеМеню" id="150"/>
-									<ExtendedTooltip name="БитриксСписокЗадачРасширеннаяПодсказка" id="151"/>
-									<Events>
-										<Event name="OnChange">БитриксСписокЗадачПриИзменении</Event>
-										<Event name="AutoComplete">БитриксСписокЗадачАвтоПодбор</Event>
-									</Events>
-								</InputField>
+								<UsualGroup name="ГруппаФильтровЗатраченноеВремя" id="158">
+									<Enabled>false</Enabled>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа фильтров затраченное время</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа фильтров затраченное время</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаФильтровЗатраченноеВремяРасширеннаяПодсказка" id="159"/>
+									<ChildItems>
+										<RadioButtonField name="ФильтрПоНевыгруженнымВБитрикс" id="101">
+											<DataPath>ФильтрПоНевыгруженнымВБитрикс</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Tumbler</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Все</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Не выгруженные</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ФильтрПоНевыгруженнымВБитриксКонтекстноеМеню" id="102"/>
+											<ExtendedTooltip name="ФильтрПоНевыгруженнымВБитриксРасширеннаяПодсказка" id="103"/>
+											<Events>
+												<Event name="OnChange">ФильтрПоНевыгруженнымВБитриксПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<InputField name="БитриксСписокЗадач" id="149">
+											<DataPath>БитриксСписокЗадач</DataPath>
+											<TitleLocation>Left</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>18</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ClearButton>true</ClearButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ContextMenu name="БитриксСписокЗадачКонтекстноеМеню" id="150"/>
+											<ExtendedTooltip name="БитриксСписокЗадачРасширеннаяПодсказка" id="151"/>
+											<Events>
+												<Event name="OnChange">БитриксСписокЗадачПриИзменении</Event>
+												<Event name="AutoComplete">БитриксСписокЗадачАвтоПодбор</Event>
+											</Events>
+										</InputField>
+										<CheckBoxField name="ФильтрПоЗавершеннымЗадачамБитрикс" id="155">
+											<DataPath>ФильтрПоЗавершеннымЗадачамБитрикс</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ФильтрПоЗавершеннымЗадачамБитриксКонтекстноеМеню" id="156"/>
+											<ExtendedTooltip name="ФильтрПоЗавершеннымЗадачамБитриксРасширеннаяПодсказка" id="157"/>
+											<Events>
+												<Event name="OnChange">ФильтрПоЗавершеннымЗадачамБитриксПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="ЗатраченноеВремя" id="21">
@@ -184,7 +218,7 @@
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Учтено в Б24</v8:content>
+											<v8:content>Запись выгружена в Б24</v8:content>
 										</v8:item>
 									</ToolTip>
 									<EditMode>EnterOnInput</EditMode>
@@ -222,6 +256,23 @@
 									<ContextMenu name="ЗатраченноеВремяНазваниеЗадачиКонтекстноеМеню" id="57"/>
 									<ExtendedTooltip name="ЗатраченноеВремяНазваниеЗадачиРасширеннаяПодсказка" id="58"/>
 								</InputField>
+								<LabelField name="ЗатраченноеВремяЗавершена" id="152">
+									<DataPath>ЗатраченноеВремя.Завершена</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Битрикс задача в статусе завершена</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Abs>HeaderPicture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<ContextMenu name="ЗатраченноеВремяЗавершенаКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="ЗатраченноеВремяЗавершенаРасширеннаяПодсказка" id="154"/>
+								</LabelField>
 								<InputField name="ЗатраченноеВремяДата" id="34">
 									<DataPath>ЗатраченноеВремя.Дата</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -751,6 +802,17 @@ https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v
 						</v8:DateQualifiers>
 					</Type>
 				</Column>
+				<Column name="Завершена" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ДатаС" id="5">
@@ -953,6 +1015,17 @@ https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФильтрПоЗавершеннымЗадачамБитрикс" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершённые задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
