@@ -64,6 +64,7 @@
 								<Button name="ЭкспортироватьВремяВБитрикс" id="46">
 									<Type>UsualButton</Type>
 									<Representation>PictureAndText</Representation>
+									<Enabled>false</Enabled>
 									<CommandName>Form.Command.ЭкспортироватьВремяВБитрикс</CommandName>
 									<Picture>
 										<xr:Abs>Picture.png</xr:Abs>
