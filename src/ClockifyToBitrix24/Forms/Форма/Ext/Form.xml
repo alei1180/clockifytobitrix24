@@ -458,10 +458,6 @@
 							<v8:content>Страница настройки</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Picture>
-						<xr:Ref>CommonPicture.РазделАдминистрирование16</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
 					<ExtendedTooltip name="СтраницаНастройкиРасширеннаяПодсказка" id="64"/>
 					<ChildItems>
 						<UsualGroup name="Группа8" id="88">
