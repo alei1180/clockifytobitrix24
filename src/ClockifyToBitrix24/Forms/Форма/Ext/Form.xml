@@ -78,6 +78,9 @@
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ДатаСКонтекстноеМеню" id="51"/>
 									<ExtendedTooltip name="ДатаСРасширеннаяПодсказка" id="52"/>
+									<Events>
+										<Event name="OnChange">ДатаСПриИзменении</Event>
+									</Events>
 								</InputField>
 								<UsualGroup name="ГруппаФильтровЗатраченноеВремя" id="158">
 									<Enabled>false</Enabled>
