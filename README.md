@@ -3,4 +3,8 @@
 [![GitHub issues](https://img.shields.io/github/issues-raw/alei1180/clockifytobitrix24?style=badge)](https://github.com/alei1180/clockifytobitrix24/issues)
 [![License](https://img.shields.io/github/license/alei1180/clockifytobitrix24?style=badge)](https://github.com/alei1180/clockifytobitrix24/blob/master/LICENSE)
 
-![](img/form_preview.png)
+![preview](img/form_preview.png)
+
+## Описание
+
+Обработка 1С, позволяющая выгружать время из тайм-трекера [Clockify](https://clockify.me/) в задачи crm [Bitrix24](https://www.bitrix24.ru/).
